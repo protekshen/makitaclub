@@ -1,0 +1,293 @@
+
+
+
+.display-none {
+    display: none!important;
+}
+
+.makita-border {
+    border: 1px solid #e6e6e6;
+}
+
+.float-right {
+    float: right;
+}
+
+.km-button {
+    margin: 0px;
+    border: 0px;
+    border-radius: 5px;
+    color: white;
+    background: #ff4040;
+    border: 1px solid red;
+    padding: 10px;
+}
+    .km-button:active,
+    .km-button:hover,
+    .km-button:focus {
+        border-color: #ff001f;
+        background: red;
+        color: white;
+        outline: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(233, 102, 102, 0.6);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(233, 102, 102, 0.6); 
+    }   
+
+
+
+
+
+/* .content-wrapper {
+    width: 1200px!important;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background: white;
+    -webkit-box-shadow: 0 0 149px 0 rgba(0,0,0,.75);
+    -moz-box-shadow: 0 0 149px 0 rgba(0,0,0,.75);
+}
+    .content-wrapper .container {
+        padding: 0px;
+        width: 1170px!important;
+    } */
+
+
+
+/*header*/
+
+header .location {
+    margin: 5px 0 0 25px;
+}
+    header .location .glyphicon-map-marker {
+        font-size: 24px;
+        color: red;
+    }
+    span.location__address {
+        font-size: 18px;
+    }
+
+
+/*Search*/
+/* .widget_product_search {
+    padding: 10px 0 0 0;
+}      
+.widget_product_search .glyphicon-search {
+    position: absolute;
+    z-index: 4;
+    left: 13px;
+    top: 10px;
+    font-size: 16px;
+}
+.widget_product_search input[type=search] {
+    padding: 0 10px 0 40px!important;
+}
+
+.widget_product_search .btn-default:hover,
+.widget_product_search .btn-default.focus {
+    color: #fff;
+    background-color: red;
+}
+
+.widget_product_search .form-control:focus, 
+.widget_product_search  .btn-default:focus,
+.widget_product_search  .btn-default:hover {
+    border-color: #ff001f;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(233, 102, 102, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(233, 102, 102, 0.6);
+} */
+
+
+/*Content*/
+
+
+
+
+
+
+
+
+
+/* 
+Общие стили
+
+ul.products li.product,
+ul.products li.product a {
+    transition: 0.2s;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+}  
+
+ul.products li.product a:hover,
+ul.products li.product a:focus {
+    text-decoration: none;
+    color: #ff0000;    
+}
+ul.products > .product:hover {
+    border: #cecece 1px solid;
+    webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);    
+} */
+
+
+
+/*----Product Page----*/
+/* TODO: Перепроверить стили */
+
+
+
+
+
+
+
+/* Характеристики , Описание, Документация */
+
+.product-tabs__title {
+    font-size: 24px;
+    color: #828182;
+    background: #eeeeee;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.product-tabs__title:hover,
+.product-tabs__title:focus,
+.product-tabs__title:active {
+    background: #e0e0e0;
+    color: red;
+    cursor: pointer;
+}
+
+
+/*---------------------------*/
+.top-bar {
+    height: 36px;
+    color: #fff;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#606060+1,2b2b2b+49,2b2b2b+62,606060+100 */
+    background: rgb(96,96,96); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(96,96,96,1) 1%, rgba(43,43,43,1) 49%, rgba(43,43,43,1) 62%, rgba(96,96,96,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(96,96,96,1) 1%,rgba(43,43,43,1) 49%,rgba(43,43,43,1) 62%,rgba(96,96,96,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(96,96,96,1) 1%,rgba(43,43,43,1) 49%,rgba(43,43,43,1) 62%,rgba(96,96,96,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606060', endColorstr='#606060',GradientType=0 ); /* IE6-9 */    
+}
+
+
+/*Left-menu*/
+
+
+.current-cat {
+    font-weight: bold;
+}
+.cat-parent.current-cat .cat-item {
+    font-weight: 100;
+}
+
+/* ---- Cart ----*/
+.cart_anchor{ 
+    float: right; 
+    vertical-align:top; 
+    background: url('/wp-content/uploads/HW151.jpg') no-repeat center center / 100% auto;
+    width: 50px;
+    height: 50px; 
+    margin-bottom: 50px;
+}
+
+
+.woocommerce-checkout textarea {
+    display: block;
+    max-width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.shipping_method.form-control {
+    width: initial;
+}
+
+.woocommerce-info {
+    background: none;
+    color: #000;
+    border: 0px;
+    padding: 0px;    
+}
+    .woocommerce-info a.showlogin {
+        color: #3588d2;
+    }
+
+form.login {
+    border: 1px solid #e6e6e6;
+    padding: 15px;
+}
+
+.woocommerce-checkout-review-order {
+    border: 1px solid #e6e6e6!important;
+    padding: 15px;
+    width: 100%!important;
+}
+.woocommerce-checkout-review-order .product-total {
+    width: 20%;
+}
+.woocommerce-billing-fields .form-row {
+    width: 100%;
+}
+
+.order_details {
+    padding-left: 5px;
+}
+
+.customer_details {
+    border: 1px solid #e6e6e6;
+    padding: 15px;
+}
+
+.delivery-address {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#billing_first_name_field,
+#billing_phone_field,
+#billing_email_field {
+    float: none!important;
+}
+
+/* --------------*/
+/* ---- Contact page ----*/
+.contact-form {
+    padding: 10px;
+}
+
+.contact-form textarea {
+    max-width: 100%;
+}
+/* ----------- */
+
+
+/* Mobile responsive */
+/* @media only screen and (max-width: 1200px), only screen and (max-device-width: 1200px) {
+    .mobile-container {
+        width: 100%!important;
+    }
+    .site-main ul.products li.product-category {
+        margin-right: 32px;
+    }
+    .site-main ul.products li.product-category.last {
+        margin-right: 0;
+    }
+
+} */
+
+/* ... */
