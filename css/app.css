@@ -583,7 +583,7 @@ footer a {
 .product-card:focus {
     border: #cecece 1px solid;
     webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.175);    
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
 }
 .product-card:hover .product-card__title a,
 .product-card:focus .product-card__title a {
