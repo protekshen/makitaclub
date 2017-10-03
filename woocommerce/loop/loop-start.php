@@ -15,7 +15,7 @@
     $display_type = get_woocommerce_term_meta($cat->term_id, 'display_type', true);
     //print_r($display_type); // products // subcategories
 
-    if ($display_type == 'subcategories' || $display_type == '') {
+    if ($display_type == 'subcategories') {
         echo '<ul class="products  subcategories-list  row  small-up-2  medium-up-3  large-up-4">';
     } else {
         echo '<ul class="products  products-list">';

@@ -147,7 +147,7 @@ ul.site-header-cart li {
 
 .cart-content__section .icon {
     position: absolute;
-    background: url(/wp-content/themes/kupimakita/images/cart.png) no-repeat;
+    background: url(/wp-content/themes/makitaclub/images/cart-small.png) no-repeat;
     background-size: contain;
     height: 65%;
     width: 65%;
