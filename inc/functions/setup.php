@@ -152,12 +152,12 @@ function storefront_scripts() {
 
 	//wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20130115', true );
 
-	/* Foundation scripts */
-	wp_enqueue_script( 'foundation', get_template_directory_uri() . '/js/vendor/foundation.js', array(), '001', true );
-	wp_enqueue_script( 'what-input', get_template_directory_uri() . '/js/vendor/what-input.js', array(), '001', true );
-	wp_enqueue_script( 'app', get_template_directory_uri() . '/js/app.js', array(), '001', true );
+	// /* Foundation scripts */
+	// wp_enqueue_script( 'foundation', get_template_directory_uri() . '/js/vendor/foundation.js', array(), '001', true );
+	// wp_enqueue_script( 'what-input', get_template_directory_uri() . '/js/vendor/what-input.js', array(), '001', true );
+	// wp_enqueue_script( 'app', get_template_directory_uri() . '/js/app.js', array(), '001', true );
 	
-	/**/
+	// /**/
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

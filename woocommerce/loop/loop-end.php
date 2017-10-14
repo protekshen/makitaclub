@@ -1,12 +1,14 @@
 <?php
 /**
- * Product Loop Start
+ * Product Loop End
  *
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
  * @version     2.0.0
  */
 ?>
+
+
 
 <?php 
 
@@ -16,9 +18,9 @@
     //print_r($display_type); // products // subcategories
 
     if ($display_type == 'subcategories') {
-        echo '<div class="products  subcategories-list  row  small-up-2  medium-up-3  large-up-4">';
+        echo '</div>';
     } else {
-        echo '<ul class="products  products-list">';
+        echo '</ul>';
     }
 
 ?>

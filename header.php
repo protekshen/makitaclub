@@ -19,17 +19,14 @@
 
 <body <?php body_class(); ?>>
 
-<div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
-  <!-- Your menu or Off-canvas content goes here -->
-
-	<!-- Close button -->
-    <button class="close-button" aria-label="Close menu" type="button" data-close>
-      <span aria-hidden="true">&times;</span>
-    </button>
-
+<div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas >
+    <!-- Your menu or Off-canvas content goes here -->
+	<button class="close-button" aria-label="Close menu" type="button" data-close>
+  		<span aria-hidden="true">&times;</span>
+	</button>
 </div>
 
-<div id="page" class="off-canvas-content"  data-off-canvas-content>
+<div id="page" class="off-canvas-content" data-off-canvas-content>
 	<?php
 	do_action( 'storefront_before_header' ); ?>
 
@@ -40,7 +37,7 @@
 		<div class="row  header-menu">
 
 			<div class="show-for-small-only  column  small-2">
-				<button class="show-for-small-only" type="button" data-open="offCanvasLeft">
+				<button type="button" class="button" data-toggle="offCanvasLeft">
 					<i class="fa fa-bars" aria-hidden="true" style="color: #fff;font-size: 2rem;"></i>
 				</button>
 			</div>
@@ -72,8 +69,6 @@
 				
 
 		</div>
-		
-		
 
 	</header>
 

@@ -29,7 +29,7 @@ if ( empty( $woocommerce_loop['columns'] ) ) {
 // Increase loop count
 $woocommerce_loop['loop'] ++;
 ?>
-<li <?php wc_product_cat_class($class = 'column'); ?>>
+<div <?php wc_product_cat_class($class = 'column'); ?>>
 
     <?php do_action( 'woocommerce_before_subcategory', $category ); ?>
 
@@ -68,4 +68,4 @@ $woocommerce_loop['loop'] ++;
     </div>
 
     <?php do_action( 'woocommerce_after_subcategory', $category ); ?>
-</li>
+</div>

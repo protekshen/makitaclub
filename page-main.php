@@ -38,7 +38,7 @@ get_header(); ?>
 						
 					if ( $terms ) {
 								
-						echo '<ul class="products  subcategories-list  row  small-up-2  medium-up-3  large-up-4">';
+						echo '<div class="products  subcategories-list  row  small-up-2  medium-up-3  large-up-4">';
 							
 						foreach ( $terms as $term ) {	
 							wc_get_template( 'content-product_cat.php', array(
@@ -46,7 +46,7 @@ get_header(); ?>
 							) );								
 						}
 							
-						echo '</ul>';
+						echo '</div>';
 						
 					}
 				?>

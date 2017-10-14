@@ -10,6 +10,23 @@
  */
 require get_template_directory() . '/inc/init.php';
 
+/**
+ * Remove default wordpress java script library from this theme
+ */
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+
+function modify_jquery() {
+    if (!is_admin()) {
+        // comment out the next two lines to load the local copy of jQuery
+        wp_deregister_script('jquery');
+        wp_register_script('jquery', get_template_directory_uri() . './js/vendor/jquery.js', false, '3.2.1');
+        wp_enqueue_script('jquery');
+    }
+}
+add_action('init', 'modify_jquery');
+/* --- */
+
 
 add_action( 'shop_messages', 'storefront_shop_messages', 1);
 
@@ -197,6 +214,12 @@ function woo_hide_product_categories_widget( $list_args ){
 	$list_args[ 'hide_empty' ] = 1;
 	
 	return $list_args;
+}
+
+add_filter( 'product_cat_class', 'remove_product_cat_class', 21, 3 );
+function remove_product_cat_class( $classes ) {
+    $classes = array_diff(  $classes, array( 'first', 'last' ) ); // remove this classes
+    return $classes;
 }
 
 add_action('woocommerce_after_checkout_validation', 'custom_woocommerce_after_checkout_validation');

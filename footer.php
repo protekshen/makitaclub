@@ -29,6 +29,9 @@
 <?php wp_footer(); ?>
 
 <script type="text/javascript" src="/wp-content/themes/makitaclub/js/custom.js"></script>
+<script type="text/javascript" src="/wp-content/themes/makitaclub/js//vendor/foundation.js"></script>
+<script type="text/javascript" src="/wp-content/themes/makitaclub/js/vendor/what-input.js"></script>
+<script type="text/javascript" src="/wp-content/themes/makitaclub/js/app.js"></script>
 
 </div></body>
 </html>

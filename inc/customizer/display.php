@@ -206,12 +206,11 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 //		wp_add_inline_style( 'storefront-style', $style );
 //		wp_add_inline_style( 'storefront-woocommerce-style', $woocommerce_style );
 
-		/* Foundation styles */
-		wp_enqueue_style( 'foundation-css', get_template_directory_uri() . '/css/foundation.css' );
-		/**/
+
 		wp_enqueue_style( 'normalize-css', get_template_directory_uri() . '/css/normalize.css' );
 		wp_enqueue_style( 'awesome-css', get_template_directory_uri() . '/css/font-awesome.css' );
 
+		wp_enqueue_style( 'foundation-css', get_template_directory_uri() . '/css/foundation.css' );
 		wp_enqueue_style( 'makita-css', get_template_directory_uri() . '/css/makita.css' );
 		wp_enqueue_style( 'new-styles-css', get_template_directory_uri() . '/css/app.css' );
 
