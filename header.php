@@ -24,9 +24,13 @@
 	data-transition="overlap"
 	data-content-scroll="false">
     <!-- Your menu or Off-canvas content goes here -->
-	<button class="close-button" aria-label="Close menu" type="button" data-close>
+	<!-- <button class="close-button" aria-label="Close menu" type="button" data-close>
   		<span aria-hidden="true">&times;</span>
-	</button>
+	</button> -->
+	<div class="search-wrapper"><?php storefront_product_search();?></div>
+
+	<div><?php storefront_header_cart(); ?></div>
+	
 </div>
 
 <div id="page" class="off-canvas-content" data-off-canvas-content>
@@ -40,7 +44,7 @@
 		<div class="row  header-menu">
 
 			<div class="show-for-small-only  column  small-2">
-				<button type="button" class="button" data-toggle="offCanvasLeft">
+				<button type="button" class="off-canvas-button" data-toggle="offCanvasLeft">
 					<i class="fa fa-bars" aria-hidden="true" style="color: #fff;font-size: 2rem;"></i>
 				</button>
 			</div>
@@ -53,6 +57,7 @@
 				</a>
 				<a class="phone  float-right" href="tel:+74952475525">8-495-247-55-25</a>
 			</div>
+			<!-- <div class="show-for-small-only  column  small-12  products-cart-mobile"><?php storefront_header_cart(); ?></div> -->
 
 			<div class="columns  medium-9  hide-for-small-only">
 				<div class="logo">
@@ -67,7 +72,7 @@
 				<?php storefront_primary_navigation();?>
 			</div>
 
-			<div class="columns  small-12  medium-3"><?php storefront_product_search();?></div>
+			<div class="columns  small-12  medium-3  hide-for-small-only"><?php storefront_product_search();?></div>
 
 				
 

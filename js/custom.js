@@ -174,4 +174,4 @@ jQuery(document).ready(function($) {
     $(".cart_item").find(".qty").on("change", function(){ 
           upd_cart_btn.trigger("click"); 
     }); 
-}); 
+});

@@ -14,7 +14,7 @@ get_header(); ?>
 	<div class="row">
 		<div class="columns  large-3">
 
-			<div class="products-cart">	
+			<div class="products-cart  hide-for-small-only">	
 				<div><?php storefront_header_cart(); ?></div>
 			</div>
 			
