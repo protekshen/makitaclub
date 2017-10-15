@@ -171,17 +171,6 @@ ul.products > .product:hover {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606060', endColorstr='#606060',GradientType=0 ); /* IE6-9 */    
 }
 
-
-/*Left-menu*/
-
-
-.current-cat {
-    font-weight: bold;
-}
-.cat-parent.current-cat .cat-item {
-    font-weight: 100;
-}
-
 /* ---- Cart ----*/
 .cart_anchor{ 
     float: right; 

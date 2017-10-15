@@ -175,3 +175,19 @@ jQuery(document).ready(function($) {
           upd_cart_btn.trigger("click"); 
     }); 
 });
+
+// Override behavior parent link of top menu
+jQuery(document).ready(function($) {
+  $('.top-menu').hover(
+    function() {
+      $(this).children('li').children('.is-accordion-submenu').removeAttr("style");
+      $(this).children('.is-accordion-submenu-parent').attr("aria-expanded", "true");
+    },
+    function() {
+      $(this).children('li').children('.is-accordion-submenu').css("display","none");
+      $(this).children('.is-accordion-submenu-parent').attr("aria-expanded", "false");         
+    }
+  )
+});
+
+

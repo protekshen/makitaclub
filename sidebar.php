@@ -22,7 +22,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		
 		echo '<ul id="accessories" class="vertical menu accordion-menu  woocommerce widget_product_categories" data-accordion-menu><li>';
 		echo '<a href="#">Каталог оснастки</a>';
-		echo '<ul style="display:none;" class="is-inactive  menu  vertical  nested  product-categories  collapse">';
+		echo '<ul style="display:none;" class="menu  vertical  nested  product-categories  collapse">';
 			wp_list_categories($args_acs); //Вывод категорий оснастки
 		echo '</ul>';
 		echo '</li></ul>';
@@ -39,14 +39,14 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		
 		echo '<ul id="tools" class="show-for-medium  vertical menu accordion-menu  woocommerce widget_product_categories" data-accordion-menu><li>';
 		echo '<a href="#">Каталог инструментов</a>';
-		echo '<ul style="display:none;"  class="  is-active  menu  vertical  nested  product-categories  collapse">';
+		echo '<ul style="display:none;"  class="is-active  menu  vertical  nested  product-categories  collapse">';
 			wp_list_categories($args_tools);
 		echo '</ul>';
 		echo '</li></ul>';
 
 		echo '<ul id="tools" class="show-for-small-only  vertical menu accordion-menu  woocommerce widget_product_categories" data-accordion-menu><li>';
 		echo '<a href="#">Каталог инструментов</a>';
-		echo '<ul style="display:none;"  class="  is-inactive  menu  vertical  nested  product-categories  collapse">';
+		echo '<ul style="display:none;"  class="menu  vertical  nested  product-categories  collapse">';
 			wp_list_categories($args_tools);
 		echo '</ul>';
 		echo '</li></ul>';

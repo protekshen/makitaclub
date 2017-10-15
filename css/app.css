@@ -34,6 +34,11 @@ ul.products {
     list-style: none;
 }
 
+.current-cat-ancestor > a, 
+.current-cat > a {
+    font-weight: bold;
+}
+
 .product__wr-button button {
     padding-bottom: 0;
     padding-top: 0;
@@ -88,55 +93,79 @@ header .phone {
 /*-- off-canvas ---*/
 
 /*-- Top menu --*/
-.primary-navigation {
-    width: 100%;
-}
-
-.primary-navigation,
-.dropdown {
-    height: 40px;
+.primary-navigation, 
+.top-menu {
+    font-size: 14px;
 }
 
 
-.header-menu li {
-    border-left: 1px solid #282828;
-    float: left;
+.primary-navigation .dropdown.menu a {
+    padding: 0.8rem 1rem;
 }
-    .header-menu li > a {
-        float: left;
-        height: 40px;
-        line-height: 40px;
-        text-decoration: none;
-        color: #fff!important;
-        font-size: 16px;
-        font-weight: bold;
-    }
-    .dropdown.menu a {
-        font-size: 14px;
-        padding: 0 10px;
-    }
-    .header-menu li:hover {
-        background-color: #FFF;
-    }
+.primary-navigation > ul.menu > li {
+    border-right: 1px solid #282828;
+}
+.primary-navigation > ul.menu > li > a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
 
-    .header-menu li:hover > a,
-    .dropdown .is-dropdown-submenu a {
-        color: #000!important;
-    }
-
-.is-dropdown-submenu {
-    border-top: 0;
+.primary-navigation > ul.menu > li:hover {
+    background-color: #fff;
+}
+.primary-navigation > ul.menu > li > a:hover {
     color: #000;
+}
+
+
+
+
+.top-menu {
+    float: left;
+    white-space: nowrap;
+}
+.top-menu.accordion-menu a {
+    padding: 0.8rem 1rem;
+}
+
+.top-menu > li {
+    border-right: 1px solid #282828;
+}
+    .top-menu > li > a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        padding-right: 2.6rem!important;
+    }
+    .top-menu > li:hover {
+        background-color: #fff;
+    }
+    .top-menu > li:hover > a {
+        color: #000
+    }
+
+
+.top-menu .submenu {
+    list-style: none;
     -webkit-box-shadow: 0px 6px 7px -3px rgba(0,0,0,0.26);
     -moz-box-shadow: 0px 6px 7px -3px rgba(0,0,0,0.26);
-    box-shadow: 0px 6px 7px -3px rgba(0,0,0,0.26);    
+    box-shadow: 0px 6px 7px -3px rgba(0,0,0,0.26); 
 }
 
-    .dropdown .is-dropdown-submenu a:hover {
-        text-decoration: none;
-        color: #FFF!important;
+.top-menu > li > ul {
+    position: absolute;
+    background: #fff;
+    z-index: 4;
+    max-height: 500px;
+    overflow-y: auto;
+}
+    .top-menu .submenu a:hover,
+    .top-menu .submenu a:focus {
+        color: #FFF;
         background-color: #00839C;
     }
+
 /*----*/
 
 
@@ -185,13 +214,17 @@ ul.site-header-cart li {
     color: #fc373e;
 }
 
+.js-off-canvas-overlay {
+    background: rgba(34, 34, 34, 0.44);
+}
+
 /*----*/
 
 
 /*-- Search --*/
 
 .search-wrapper {
-    margin: 0.625rem
+    margin: 0.625rem;
 }
 
 .site-search {
@@ -745,7 +778,17 @@ footer a {
 
 
 @media screen and (max-width: 39.9375em) { /* small-only */
-    .products-cart {
-        /* margin-top: 1rem; */
+
+    .breadcrumb-wrap {
+        margin-top: 10px;
     }
+
+    .breadcrumb-block {
+        margin: 0;
+    }
+
+    .widget_product_categories {
+        margin-bottom: 0.5rem;
+    }
+
 }

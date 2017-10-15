@@ -69,7 +69,42 @@
 					</a>
 				</div>
 
+
+				<?php
+					$category_id = get_product_category_by_slug('katalog-osnastky');
+					$args_acs = array(
+						'taxonomy'  => 'product_cat',
+						'child_of'  => $category_id,
+						'title_li' => ''
+					);
+					
+					// echo '<ul class="vertical menu accordion-menu  woocommerce widget_product_categories" data-accordion-menu><li>';
+					echo '<ul class="top-menu  menu   vertical  hover" data-multi-open="false" data-responsive-menu="drilldown medium-accordion"><li>';
+					echo '<a href="/product-category/katalog-osnastky/">Оснастка</a>';
+					echo '<ul style="display: none;"  class="menu  vertical">';
+						wp_list_categories($args_acs); //Вывод категорий оснастки
+					echo '</ul>';
+					echo '</li></ul>';
+				?>
+				<?php
+					$args_tools = array(
+						'taxonomy'  => 'product_cat',
+						'child_of'  => '', // root category
+						'title_li' => '', // исключение заголовка
+						'exclude'   => 122 // исключение дерева категорий Оснастки
+					);
+					
+					// echo '<ul class="vertical menu accordion-menu  woocommerce widget_product_categories" data-accordion-menu><li>';
+					echo '<ul class="top-menu  menu  vertical  hover" data-multi-open="false" data-responsive-menu="drilldown medium-accordion"><li>';
+					echo '<a href="/">Инструменты</a>';
+					echo '<ul style="display: none;"  class="menu  vertical">';
+						wp_list_categories($args_tools); //Вывод категорий оснастки
+					echo '</ul>';
+					echo '</li></ul>';
+				?>
+				<!-- Primary_navigation -->
 				<?php storefront_primary_navigation();?>
+				<!-- #primary_navigation -->
 			</div>
 
 			<div class="columns  small-12  medium-3  hide-for-small-only"><?php storefront_product_search();?></div>
@@ -80,7 +115,7 @@
 
 	</header>
 
-	<div class="row">
+	<div class="row  breadcrumb-wrap">
 		<div class="columns"> 
 			<?php 
 				if (get_page_link() == home_url('/')) {
