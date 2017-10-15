@@ -19,7 +19,10 @@
 
 <body <?php body_class(); ?>>
 
-<div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas >
+<div class="off-canvas position-left" id="offCanvasLeft" 
+	data-off-canvas
+	data-transition="overlap"
+	data-content-scroll="false">
     <!-- Your menu or Off-canvas content goes here -->
 	<button class="close-button" aria-label="Close menu" type="button" data-close>
   		<span aria-hidden="true">&times;</span>
@@ -74,11 +77,16 @@
 
 	<div class="row">
 		<div class="columns"> 
-			<div class="breadcrumb-block">  
-				<div class="column  large-9">
+			<?php 
+				if (get_page_link() == home_url('/')) {
+					$hide = 'hide-for-small-only';
+				}
+			?>
+			<div class="breadcrumb-block  <?php echo $hide; ?>">  
+				<div class="column  small-12  large-9">
 					<?php do_action( 'custom_breadcrumb' );	?>
 				</div>
-				<div class="login  column  large-3  text-right">
+				<div class="login  column  large-3  text-right  hide-for-small-only">
 						<?php
 							if ( is_user_logged_in() ) {
 								echo '<i class="fa fa-sign-out" aria-hidden="true"></i>';

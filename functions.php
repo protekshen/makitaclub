@@ -20,7 +20,7 @@ function modify_jquery() {
     if (!is_admin()) {
         // comment out the next two lines to load the local copy of jQuery
         wp_deregister_script('jquery');
-        wp_register_script('jquery', get_template_directory_uri() . './js/vendor/jquery.js', false, '3.2.1');
+        wp_register_script('jquery', get_template_directory_uri() . '/js/vendor/jquery.js', false, '3.2.1');
         wp_enqueue_script('jquery');
     }
 }
