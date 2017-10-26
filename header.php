@@ -55,7 +55,7 @@
 						title="Makita-Club - эллектроинструмент высокого качества, по низкимценам" 
 					/>
 				</a>
-				<a class="phone  float-right" href="tel:+74952475525">8-495-247-55-25</a>
+				<a class="phone  float-right" href="tel:+74950000777">8-495-000-07-77</a>
 			</div>
 			<!-- <div class="show-for-small-only  column  small-12  products-cart-mobile"><?php storefront_header_cart(); ?></div> -->
 

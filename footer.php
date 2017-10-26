@@ -16,12 +16,12 @@
                     <div class="title">Контакты</div>
                     <div class="phone">
                         <span class="glyphicon glyphicon-earphone"></span>
-                        <a href="tel:+74952475525">8-495-247-55-25</a>                    
+                        <a href="tel:+74952475525">8-495-000-07-77</a>
                     </div>
                     <span>(Многоканальный)</span>
                 </div>
             </div>
-            <div class="copyright">©2015-2017 makita-club.ru</div>
+            <div class="copyright">©2015-2017 makitaclub.ru</div>
         </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

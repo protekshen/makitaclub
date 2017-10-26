@@ -10,6 +10,19 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 }
 ?>
 
+<!-- TODO: Переделать-->
+<div class="hide-for-small-only" style="
+    background: #fafafa;
+    border: 1px solid rgba(191, 191, 191, 0.23);
+    border-radius: 5px;
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+    padding: 10px;
+    text-align: center;
+"><i class="fa fa-phone" aria-hidden="true" style="
+    color: red;
+"></i><a class="phone" href="tel:+74950000777">  8-495-000-07-77</a></div>
+
 <div id="secondary" class="widget-area" role="complementary">
 	
 	<?php
