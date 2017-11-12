@@ -240,13 +240,6 @@ form.login {
     padding: 15px;
 }
 
-.delivery-address {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
 #billing_first_name_field,
 #billing_phone_field,
 #billing_email_field {

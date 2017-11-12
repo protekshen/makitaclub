@@ -121,21 +121,21 @@ function wc_add_pos_checkout( $checkout ) {
 			'type' 				=> 'select',
 			'label' 			=> 'Точка самовывоза',
             'input_class' => array('form-control'),
-			// 'required'          => true,
+			'required'          => false,
 			'placeholder' 		=> 'Выберите точку самовывоза',
             'options'           => array(
                 // пункты самовывоза:
-                //'no' => 'Не выбрана',
+                // 'no' => 'Не выбрана',
                 // 'nourth' => 'Север м. Свиблово, ул. Верхоянская 18к2',
                 // 'sourth' => 'ЮГ м. Аннино 33 км МКАД'
             )
 		);	
 }
 
-add_action('woocommerce_checkout_process', 'custom_woocommerce_checkout_process');
-
+// TODO: процесс выбора точки самовывоза
+// add_action('woocommerce_checkout_process', 'custom_woocommerce_checkout_process');
 function custom_woocommerce_checkout_process() {         
-    if ( $_POST['shipping_method'][0] === 'local_pickup' && (!$_POST['billing_pos'] || $_POST['billing_pos'] === 'no')){
+    if ( $_POST['shipping_method'][0] === 'local_pickup' && (!$_POST['billing_pos'] || $_POST['billing_pos'] === 'no')){  
         wc_add_notice( 'Не выбрана точка самовывоза', 'error' );
     }
 }

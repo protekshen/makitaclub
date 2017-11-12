@@ -28,14 +28,13 @@ foreach ($mybillingfields as $key) : ?>
 
 
 
-<!--<label>Способ получения товара</label>
-<p>-->
-	<?php //wc_cart_totals_shipping_html(); ?>
-<!--</p>-->
+<label>Способ получения товара</label>
+<?php wc_cart_totals_shipping_html(); ?>
+
 
 <?php $mybillingfields=array(
-    "billing_address_1",
-	"billing_pos"
+	"billing_pos",
+    "billing_address_1"
 ); 
 foreach ($mybillingfields as $key) : ?>	
 
@@ -46,22 +45,20 @@ foreach ($mybillingfields as $key) : ?>
 	?>--> 
 
 	<?php if ($key == 'billing_address_1') {
-		woocommerce_form_field( $key, $checkout->checkout_fields['billing'][$key], $checkout->get_value( $key ) );
+		// woocommerce_form_field( $key, $checkout->checkout_fields['billing'][$key], $checkout->get_value( $key ) );
 	} 
 	?>
 
 <?php endforeach; ?>
 
-<div class="delivery-address makita-border">
-<label>Способ получения товара</label>
-<p>
-	<?php wc_cart_totals_shipping_html(); ?>
-</p>
-<?php foreach ($mybillingfields as $key) : ?>
-	<?php 
-		woocommerce_form_field( $key, $checkout->checkout_fields['billing'][$key], $checkout->get_value( $key ) );	
-	?>
-<?php endforeach; ?>
+<div class="delivery-address">
+
+	<?php foreach ($mybillingfields as $key) : ?>
+		<?php 
+			woocommerce_form_field( $key, $checkout->checkout_fields['billing'][$key], $checkout->get_value( $key ) );	
+		?>
+	<?php endforeach; ?>
+
 </div>
 	
 	
