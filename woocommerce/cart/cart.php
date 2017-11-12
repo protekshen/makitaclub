@@ -19,7 +19,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
 
-<table class="shop_table cart table  hide-for-small-only" cellspacing="0">
+<table class="shop_table cart table" cellspacing="0">
 	<thead>
 		<tr>
 			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
@@ -144,7 +144,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 	</tbody>
 </table>
 
-<table class="shop_table cart table  show-for-small-only" cellspacing="0">
+<!--<table class="shop_table cart table  show-for-small-only" cellspacing="0">
 	<thead>
 		<tr>
 			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
@@ -267,7 +267,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 		<?php do_action( 'woocommerce_after_cart_contents' ); ?>
 	</tbody>
-</table>
+</table>-->
 
 <?php do_action( 'woocommerce_after_cart_table' ); ?>
 

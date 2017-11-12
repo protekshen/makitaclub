@@ -155,7 +155,7 @@ jQuery(document).ready(function(){
             'scrollTop' : jQuery(".cart-content__section .icon").position().top
         });
         var itemImg = jQuery(this).parent().parent().parent().parent().find('.product-card__thumbnail').find('img').eq(0);
-        flyToElement(jQuery(itemImg), jQuery('.cart-content__section .icon'));
+        flyToElement(jQuery(itemImg), jQuery('.products-cart'));
     });
 });
 

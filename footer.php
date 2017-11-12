@@ -22,6 +22,19 @@
                 </div>
             </div>
             <div class="copyright">©2015-2017 makitaclub.ru</div>
+
+            <div class="reveal" id="clubPriceModal" data-reveal>
+                <h1>Как купить товар по цене клуба?</h1>
+                
+                <p>Чтобы приобрести товар по цене Клуба, вам необходимо преобрести карту клуба.</p>
+                <p>Клубная карта предоставляет уникальные условия по ценам и условиям поставки. А также индивидуальный подход к каждому клиенту.</p>
+                <p>Для получения более подробной информации, пожалуйста, посетите <a style="color: #6767f5;" href="/makita-club/" target="_blank">страницу с правилами клуба</a></p></p>
+
+                <button class="close-button" data-close aria-label="Close reveal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
         </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

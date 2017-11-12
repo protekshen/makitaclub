@@ -435,13 +435,21 @@ ul.site-header-cart li {
         box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(233, 102, 102, 0.6); 
     }
 
+.club-price {
+    font-size: 1.5rem;
+    display: block;
+    color: #10739e;
+}
+.club-price.category {
+    font-size: 1.2rem;
+}
+    .club-price span {
+        font-weight: bold;
+    }
 
-
-
-
-
-
-
+    .club-price .fa-question-circle-o {
+        color: #d5d5d5;
+    }
 
 
 

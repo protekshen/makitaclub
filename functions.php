@@ -180,6 +180,36 @@ function custom_woocommerce_product_add_to_cart_text($product) {
     
 }
 
+// Overide price, sale_price 
+add_filter('woocommerce_get_price', 'return_custom_price', $product, 2); 
+function return_custom_price($price, $product) {    
+    $new_price = $product->regular_price;
+    return $new_price;
+}   
+
+add_filter( 'woocommerce_get_price_html', 'custom_get_price_html', 100, 2 );
+function custom_get_price_html( $price, $product ){
+    if ($product->sale_price) {
+        if (is_product()) {
+            $price = '
+                <span class="amount">' . $product->regular_price. ' руб.</span>
+                <div class="club-price">Клубная цена <span>' . $product->sale_price. '</span> руб.<a data-open="clubPriceModal"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a></div>
+            ';
+        } else {
+            $price = '
+                <span class="amount">' . $product->regular_price. ' руб.</span>
+                <div class="club-price  category"><span>' . $product->sale_price. '</span> руб.<a data-open="clubPriceModal"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a></div>
+            ';
+        }
+        
+        return $price;
+    } else {
+        return $price;
+    }
+    
+}
+
+
 add_filter('woocommerce_product_docs', 'woocommerce_product_docs_tab');
 function woocommerce_product_docs_tab() {
     wc_get_template( 'single-product/tabs/docs.php' );

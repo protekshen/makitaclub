@@ -47,54 +47,62 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php do_action('shop_messages'); ?>
 
 			<div class="columns  product-page__price">
-
-				<div class="column medium-6">
-
-					<div class="product-sale">
-						<?php
-							add_action('km_woocommerce_show_product_sale_flash','woocommerce_show_product_sale_flash', 10);
-							do_action('km_woocommerce_show_product_sale_flash');
-						?>
-						<div class="sku_wrapper">
-							<span class="sku" itemprop="sku"><?php _e( 'SKU:', 'woocommerce' ); ?> <?php echo ( $sku = $product->get_sku() ) ? $sku : __( 'N/A', 'woocommerce' ); ?></span>
+				<div class="row">
+					<div class="column medium-6">
+						<div class="product-sale">
+							<?php
+								// add_action('km_woocommerce_show_product_sale_flash','woocommerce_show_product_sale_flash', 10);
+								// do_action('km_woocommerce_show_product_sale_flash');
+							?>
+							<div class="sku_wrapper">
+								<span class="sku" itemprop="sku"><?php _e( 'SKU:', 'woocommerce' ); ?> <?php echo ( $sku = $product->get_sku() ) ? $sku : __( 'N/A', 'woocommerce' ); ?></span>
+							</div>
 						</div>
 					</div>
 
-					<div>
-						<?php if ( ! defined( 'ABSPATH' ) ) {
-							exit; // Exit if accessed directly
-						}
-						global $product;
-						?>
-
-						<?php if ( $product->get_price() ) : ?>
-
-						<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-							<p class="price"><?php echo $product->get_price_html(); ?></p>
-							<meta itemprop="price" content="<?php echo $product->get_price(); ?>" />
-							<meta itemprop="priceCurrency" content="<?php echo get_woocommerce_currency(); ?>" />
-							<link itemprop="availability" href="http://schema.org/<?php echo $product->is_in_stock() ? 'InStock' : 'OutOfStock'; ?>" />
+					<div class="column medium-6">
+						<div class="float-right">
+							<?php
+								if ($product->price == 0 && $product->is_in_stock() == 1) {
+									echo "<div style='position: relative;' class='product__wr-button'>";
+										echo "<div class='product-more'>Товар временно отсутствует</div>";
+									echo "</div>";
+								} else {
+									add_action('custom_template_single_add_to_cart','woocommerce_template_single_add_to_cart', 10);
+									do_action('custom_template_single_add_to_cart');
+								}				
+							?>
 						</div>
-
-						<?php endif; ?>
 					</div>
 				</div>
 
-				<div class="column medium-6">
-					<div class="float-right">
-						<?php
-							if ($product->price == 0 && $product->is_in_stock() == 1) {
-								echo "<div style='position: relative;' class='product__wr-button'>";
-									echo "<div class='product-more'>Товар временно отсутствует</div>";
-								echo "</div>";
-							} else {
-								add_action('custom_template_single_add_to_cart','woocommerce_template_single_add_to_cart', 10);
-								do_action('custom_template_single_add_to_cart');
-							}				
-						?>
+				<div class="row">
+					<div class="column">
+						<div>
+							<?php if ( ! defined( 'ABSPATH' ) ) {
+								exit; // Exit if accessed directly
+							}
+							global $product;
+							?>
+
+							<?php if ( $product->get_price() ) : ?>
+
+							<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+								<p class="price"><?php echo $product->get_price_html(); ?></p>
+								<meta itemprop="price" content="<?php echo $product->get_price(); ?>" />
+								<meta itemprop="priceCurrency" content="<?php echo get_woocommerce_currency(); ?>" />
+								<link itemprop="availability" href="http://schema.org/<?php echo $product->is_in_stock() ? 'InStock' : 'OutOfStock'; ?>" />
+							</div>
+
+							<?php endif; ?>
+						</div>
 					</div>
 				</div>
+
 			</div>
+
+
+
 
 			<div class="column  short-description">
 				<?php
@@ -136,8 +144,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	
 	<div class="related-products">
 		<?php
-			add_action('km_related_products','woocommerce_output_related_products', 10);
-			do_action('km_related_products');
+			// add_action('km_related_products','woocommerce_output_related_products', 10);
+			// do_action('km_related_products');
 		?>
 	</div>
 
