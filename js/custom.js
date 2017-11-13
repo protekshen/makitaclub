@@ -187,7 +187,12 @@ jQuery(document).ready(function($) {
       $(this).children('li').children('.is-accordion-submenu').css("display","none");
       $(this).children('.is-accordion-submenu-parent').attr("aria-expanded", "false");         
     }
+    
   )
+
+
+  
+
 });
 
 

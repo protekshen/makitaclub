@@ -125,23 +125,23 @@ header .phone {
     float: left;
     white-space: nowrap;
 }
-.top-menu.accordion-menu a {
+.top-menu.accordion-menu a{
     padding: 0.8rem 1rem;
 }
 
 .top-menu > li {
     border-right: 1px solid #282828;
 }
-    .top-menu > li > a {
+    .top-menu > li > div > a {
         text-decoration: none;
         color: #fff;
         font-weight: bold;
-        padding-right: 2.6rem!important;
+        /*padding-right: 2.6rem!important;*/
     }
     .top-menu > li:hover {
         background-color: #fff;
     }
-    .top-menu > li:hover > a {
+    .top-menu > li:hover > div > a {
         color: #000
     }
 
@@ -449,6 +449,10 @@ ul.site-header-cart li {
 
     .club-price .fa-question-circle-o {
         color: #d5d5d5;
+    }
+
+    .club-price a {
+        outline: none;
     }
 
 
