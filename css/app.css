@@ -243,16 +243,22 @@ ul.site-header-cart li {
     .site-search input[type=search] {
         padding: 0 10px 0 40px!important;
         margin: 0;
-        height: 25px;
+        height: 26px;
     }
 
     .site-search .input-group,
     .site-search .input-group-btn input {
         margin: 0;
-        height: 27px;
+        height: 26px;
         padding-top: 0;
         padding-bottom: 0;
     }
+
+    .site-search .input-group-btn input {
+        left: -3px;
+        position: relative;
+    }
+
 .cart-content__section .icon
     .site-search .button {
         padding-top: 5px;
@@ -327,24 +333,26 @@ ul.site-header-cart li {
 
 .catalog-ordering {
     width: 100%;
-    min-height: 2rem;
+    font-size: .857em;
+    padding: 0 1rem;
+    /* min-height: 2rem; */
     display: inline-block;
-    color: #bfbfbf;
+    /* color: #bfbfbf; */
     background: #fafafa;
     border: 1px solid #e9e9e9;
     border-radius: 5px;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
     .catalog-ordering .woocommerce-ordering {
         float: right;
     }
         .woocommerce-ordering a {
-           color: #bfbfbf;
-            font-size: .857em;
+            color: #6f6f6f;
+            text-decoration: underline;
         }
         .woocommerce-ordering a:hover,
         .woocommerce-ordering a:focus {
-            color: #7F7F7F;
+            color: #000;
         }      
 
 /*----*/

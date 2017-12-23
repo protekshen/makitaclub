@@ -13,6 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 <form class="woocommerce-ordering" method="get">
+	<span>Сортировка: </span>
 	<?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
 		<?php 
 			if ($id == 'popularity' || $id == 'date') {

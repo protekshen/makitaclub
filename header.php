@@ -62,7 +62,40 @@
 	<div class="search-wrapper"><?php storefront_product_search();?></div>
 
 	<div><?php storefront_header_cart(); ?></div>
-	
+
+	<style>
+		.left-menu {
+			text-align: center;
+		}
+
+		.left-menu div {
+			padding: 10px;
+			border: 1px solid #fff;
+		}
+		.left-menu div a{
+			color: #fff;
+		}
+
+		.left-menu div:hover,
+		.left-menu div:focus {
+			background-color: #fff;
+		}
+			.left-menu div:hover a,
+			.left-menu div:focus a {
+				color: #000;
+			}
+
+
+
+	</style>
+	<div class="row  column  left-menu">
+		<div><a href="/product-category/katalog-osnastky/">Оснастка</a></div>
+		<div><a href="/">Инструменты</a></div>
+		<div><a href="/guarantee/">Гарантия и возврат</a></div>
+		<div><a href="/payment/">Оплата и доставка</a></div>
+		<div><a href="/contacts/">Контакты</a></div>
+	</div>
+
 </div>
 
 <div id="page" class="off-canvas-content" data-off-canvas-content>
